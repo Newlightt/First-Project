@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {min-height: 100%;}
+
+body {
+    font-size: 15px;
+    font-family: "Spartan", sans-serif;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: max(42%, 440px), max(75%, 400px);
+    background-position: top left, bottom right;
+}
+
+.container {
+    max-width: 63rem;
+    margin: 0 auto;
+}
+
+.top-layer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5rem;
+}
+
+.left-part {
+    flex-basis: 50%;
+    margin-top: 5rem;
+}
+
+.left-part h1 {
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    font-size: 40px;
+    padding-bottom: 10px;
+    padding-right: 4rem;
+}
+
+.left-part p {
+    color: hsl(303, 10%, 53%);
+    line-height: 150%;
+}
+
+.right-part {
+    flex-basis: 50%;
+}
+
+ul li {
+    display: flex;
+    list-style: none;
+    background-color: hsl(300, 24%, 96%);
+    border: 1px;
+    border-radius: 10px;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    max-width: 25rem;
+    gap: 1.5rem;
+}
+
+li p {
+    color:  hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+/* --Bottom Layer-- */
+
+.bottom-layer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20.2rem, 16rem) );
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color:  hsl(300, 43%, 22%);
+    border: 1px;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    height: 12rem;
+    text-align: left;
+}
+
+.split {
+    display: flex;
+    align-items: center;
+}
+
+.split img {
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.card-content p {
+    font-weight: 400;
+    color: hsl(300, 24%, 96%);
+    font-size: 13px;
+    margin-top: 1.5rem;
+    line-height: 150%;
+}
+
+@media (min-width:1000px) {
+    .rating-2 {
+        margin-left: 3rem;
+    }
+    .rating-3 {
+        margin-left: 6rem;
+    } 
+    .card-2 {
+        margin-top: 1rem;
+    }
+    .card-3 {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width:700px) {
+    .top-layer, ul li {
+        flex-direction: column;
+        align-items: center;
+    }
+    ul li {
+        padding: 1rem 1.7rem;
+        gap: 1rem;
+    }
+    .left-part {
+        text-align: center;
+        margin-top: 4rem;
+    }
+    .left-part h1{
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
+    }
+    .left-part p {
+        padding: 0 1rem;
+    }
+    .bottom-layer {
+       place-content: center;
+       margin-bottom: 6rem;
+    }
+}
+
+
